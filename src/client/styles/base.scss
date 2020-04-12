@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #85c4ee;
+}
+
+main {
+    flex: 2;
+}
+
+section {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+section h2{
+    color: #016fb8;
+    font-size: 26px;
+    margin: 14px 0 ;
+}
+
+section ul li{
+    margin: 10px 5px 10px 0;
+    font-size: 20px;
+}

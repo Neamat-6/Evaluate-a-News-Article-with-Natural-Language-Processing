@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+        <link rel="stylesheet" href="../main.css" ></head>
+
+    <body>
+
+        <header>
+            <div class="">
+                Logo
+            </div>
+            <div class="">
+                navigation
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <h2>project 4 nano degree program</h2>
+                <br>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value=""  placeholder="Please enter valid URL">
+                    <input id="btn" type="submit" name="submit" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            </section>
+
+            <section class="url-results">
+            <h2>results</h2>
+                <ul>
+                    <li>Text Polarity: <p id="polarity"></p></li>
+                    <li>Confidence: <p id="polarity_confidence"></p></li>
+
+                    <li>Text Subjectivity: <p id="subjectivity"></p></li>
+                    <li>Confidence: <p id="subjectivity_confidence"></p></li>
+
+                    <li>Text Excerpt: <p id="excerpt"></p></li>
+                </ul>
+            </section>
+
+
+        </main>
+
+        <footer>
+            <p>This is a footer</p>
+        </footer>
+        <script>
+            if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js').then(registration =>{
+                    console.log('SW registered successfuly: ', registration);
+                });
+            });
+            }else{
+            console.log("Service Working not supported");
+                }
+    </script>
+    <script src="main.js"></script>    
+</body>
+</html>
